@@ -36,7 +36,7 @@ layers:
   - M
   - B
   - V
-  - CAPS LOCK
+  - CAPSLOCK
   - {t: Pontuacao, h: sticky}
   - {t: ESC, h: NumericaSetas}
   - {t: Space, h: Ctrl}
@@ -208,7 +208,7 @@ layers:
   - M
   - B
   - V
-  - CAPS LOCK
+  - CAPSLOCK
   - {t: Pontuacao, h: sticky}
   - {t: ESC, h: NumericaSetas}
   - {t: Space, h: Ctrl}
