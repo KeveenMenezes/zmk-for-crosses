@@ -13,7 +13,7 @@ layers:
   - P
   - Q
   - ''
-  - '&osm_sa'
+  - {t: (MOD LSFT | MOD LALT), h: sticky}
   - H
   - I
   - E
@@ -25,7 +25,7 @@ layers:
   - N
   - R
   - Tab
-  - {t: BaseDpi, h: toggle}
+  - {t: NumericaSetas, h: toggle}
   - Z
   - {t: Funcionalidade, h: sticky}
   - J
@@ -136,82 +136,39 @@ layers:
   - {t: BT, h: '3'}
   - BT CLR
   - ''
-  - ''
-  - F2
   - F12
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - F8
-  - F3
-  - F1
   - F7
-  - F5
-  - F11
-  - F4
+  - F8
   - F9
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F10
+  - F4
+  - F5
+  - F6
   - ''
   - ''
   - ''
   - ''
   - {type: held}
   - ''
-  - F6
   - ''
   - ''
-  - F10
+  - F11
+  - F1
+  - F2
+  - F3
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - {t: Ctrl, h: sticky}
-  - {t: Shift, h: sticky}
-  - {t: Alt, h: sticky}
   - ''
-  BaseDpi:
-  - '&mkp MCLK'
-  - '&mkp RCLK'
-  - Y
-  - O
-  - X
-  - '&mkp LCLK'
-  - F
-  - C
-  - L
-  - P
-  - Q
   - ''
-  - '&osm_sa'
-  - H
-  - I
-  - E
-  - A
-  - U
-  - D
-  - S
-  - T
-  - N
-  - R
-  - Tab
-  - {t: Base, h: toggle}
-  - Z
-  - {t: Funcionalidade, h: sticky}
-  - J
-  - K
-  - DEL
-  - W
-  - G
-  - M
-  - B
-  - V
-  - CAPSLOCK
-  - {t: Pontuacao, h: sticky}
-  - {t: ESC, h: NumericaSetas}
-  - {t: Space, h: Ctrl}
-  - {t: BSPC, h: Shift}
-  - {t: Enter, h: Alt}
-  - {t: Cmd, h: sticky}
