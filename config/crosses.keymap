@@ -23,18 +23,18 @@
 
         Base {
             bindings = <
-&mkp MCLK             &mkp RCLK            &kp Y                 &kp O               &kp X               &mkp LCLK            &kp F             &kp C                  &kp L                      &kp P [...]
-&osm_sa (MOD_LSFT | MOD_LALT) &kp H        &kp I                 &kp E               &kp A               &kp U                &kp D             &kp S                  &kp T                      &kp N [...]
-&to 2                 &kp Z                &sl 3                 &kp J               &kp K               &kp DELETE           &kp W             &kp G                  &kp M                      &kp B [...]
+&mkp MCLK             &mkp RCLK            &kp Y                 &kp O               &kp X               &mkp LCLK            &kp F             &kp C                  &kp L                      &kp P    &kp Q  &none
+&osm_sa (MOD_LSFT | MOD_LALT) &kp H        &kp I                 &kp E               &kp A               &kp U                &kp D             &kp S                  &kp T                      &kp N    &kp R  &kp TAB
+&to 2                 &kp Z                &sl 3                 &kp J               &kp K               &kp DELETE           &kp W             &kp G                  &kp M                      &kp B    &kp V  &kp CAPSLOCK
                                                         &sl 1                &lt 2 ESCAPE       &mt LEFT_CONTROL SPACE  &mt RIGHT_SHIFT BACKSPACE  &mt LEFT_ALT ENTER    &sk LEFT_GUI
             >;
         };
 
         Pontuacao {
             bindings = <
-&none             &kp LS(N3)           &kp LS(N6)            &kp LS(N4)          &kp SQT             &kp LS(N5)           &kp LS(GRAVE)     &kp LS(N2)             &kp LS(EQUAL)              &kp SLASH [...]
-&kp LEFT_BRACKET  &kp MINUS            &kp LS(LEFT_BRACKET)  &kp LS(N9)          &kp LS(SQT)         &kp COMMA            &kp LS(N1)        &kp COMMA              &kp DOT                    &kp SEMICO[...]
-&none             &kp LS(MINUS)        &kp LS(RIGHT_BRACKET) &kp LS(N0)          &kp GRAVE           &kp LS(DOT)          &kp LS(SLASH)     &kp LS(SEMICOLON)      &kp LS(BACKSLASH)          &kp LS(N8)[...]
+&none             &kp LS(N3)           &kp LS(N6)            &kp LS(N4)          &kp SQT             &kp LS(N5)           &kp LS(GRAVE)     &kp LS(N2)             &kp LS(EQUAL)              &kp SLASH    &kp BACKSLASH  &kp KP_ENTER
+&kp LEFT_BRACKET  &kp MINUS            &kp LS(LEFT_BRACKET)  &kp LS(N9)          &kp LS(SQT)         &kp COMMA            &kp LS(N1)        &kp COMMA              &kp DOT                    &kp SEMICOLON  &kp EQUAL  &kp RIGHT_BRACKET
+&none             &kp LS(MINUS)        &kp LS(RIGHT_BRACKET) &kp LS(N0)          &kp GRAVE           &kp LS(DOT)          &kp LS(SLASH)     &kp LS(SEMICOLON)      &kp LS(BACKSLASH)          &kp LS(N8)  &kp LS(N7)  &kp KP_NUMLOCK
                                                         &none                &none               &kp LEFT_CONTROL      &mo 0                    &kp LEFT_ALT          &none
             >;
         };
