@@ -2,17 +2,17 @@ layout: {zmk_keyboard: crosses}
 layers:
   Base:
   - DEL
-  - click dir.
+  - herdr prefix
   - Y
   - O
   - X
-  - click
+  - Spotlight
   - F
   - C
   - L
   - P
   - Q
-  - ''
+  - repetir
   - {t: herdr prefix, h: ⇧⌥}
   - H
   - I
@@ -30,7 +30,7 @@ layers:
   - {t: Func, h: sticky}
   - J
   - K
-  - Scroll
+  - ESC
   - W
   - G
   - M
@@ -89,12 +89,12 @@ layers:
   - {t: Alt, h: sticky}
   - {t: Cmd, h: sticky}
   Func:
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - BT CLR
   - ''
+  - BT CLR
+  - {t: BT, h: '3'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '0'}
   - F12
   - F7
   - F8
@@ -131,21 +131,93 @@ layers:
   - print área
   - print/gravar
   - Studio 🔓
+  Mouse:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Snipe
+  - click dir.
+  - Scroll
+  - click
+  - click meio
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Fluxo:
+  - tarefas
+  - nova aba
+  - aba ◀
+  - aba ▶
+  - goto
+  - shell flut.
+  - aero service
+  - observ.
+  - obsidian
+  - scratch
+  - aero windows
+  - herdr prefix
+  - captura
+  - zoom
+  - agente notif.
+  - agente ◀
+  - agente ▶
+  - workspaces
+  - web
+  - chat
+  - devops
+  - music
+  - aero resize
+  - split →
+  - mapa teclado
+  - lazygit
+  - lazydocker
+  - gh dash
+  - lazysql
+  - PR atual
+  - aero infra
+  - code
+  - infra
+  - term
+  - aero move
+  - split ↓
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Scroll:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -164,78 +236,6 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Fluxo:
-  - herdr ?
-  - nova aba
-  - aba ◀
-  - aba ▶
-  - goto
-  - shell flut.
-  - aero service
-  - observ.
-  - obsidian
-  - scratch
-  - aero windows
-  - herdr prefix
-  - {t: ▽, type: trans}
-  - zoom
-  - agente notif.
-  - agente ◀
-  - agente ▶
-  - workspaces
-  - web
-  - chat
-  - devops
-  - music
-  - aero resize
-  - split →
-  - {t: ▽, type: trans}
-  - lazygit
-  - lazydocker
-  - gh dash
-  - lazysql
-  - PR atual
-  - aero infra
-  - code
-  - infra
-  - term
-  - aero move
-  - split ↓
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Mouse:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Snipe
-  - click dir.
-  - click meio
-  - click
-  - Scroll
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

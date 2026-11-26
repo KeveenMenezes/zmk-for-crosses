@@ -8,9 +8,11 @@
 #define PONT   1
 #define NUM    2
 #define FUNC   3
-#define SCROLL 4
+// O driver do trackball decide rolar/precisão pelo layer ATIVO MAIS ALTO: Scroll e Snipe
+// precisam ficar acima do Mouse (automouse), senão o Mouse ligado esconde os dois.
+#define MOUSE  4
 #define FLUXO  5
-#define MOUSE  6
+#define SCROLL 6
 #define SNIPE  7
 
 &mt {
@@ -79,9 +81,9 @@
         Base {
             display-name = "Base";
             bindings = <
-&kp DELETE            &mkp RCLK            &kp Y                 &kp O               &kp X               &mkp LCLK            &kp F             &kp C                  &kp L                      &kp P    &kp Q  &none
+&kp DELETE            &kp LC(A)            &kp Y                 &kp O               &kp X               &kp LG(SPACE)        &kp F             &kp C                  &kp L                      &kp P    &kp Q  &key_repeat
 &mt LS(LALT) LC(A)    &kp H                &kp I                 &kp E               &kp A               &kp U                &kp D             &kp S                  &kp T                      &kp N    &kp R  &kp TAB
-&to NUM               &kp Z                &sl FUNC              &kp J               &kp K               &mo SCROLL           &kp W             &kp G                  &kp M                      &kp B    &kp V  &caps_word
+&to NUM               &kp Z                &sl FUNC              &kp J               &kp K               &kp ESCAPE           &kp W             &kp G                  &kp M                      &kp B    &kp V  &caps_word
                                                         &slmo FLUXO PONT     &lt NUM ESCAPE     &spc_ctrl LEFT_CONTROL SPACE  &mt RIGHT_SHIFT BACKSPACE  &mt LEFT_ALT ENTER    &sk LEFT_GUI
             >;
         };
@@ -111,33 +113,10 @@
         Funcionalidade {
             display-name = "Func";
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3          &bt BT_CLR          &none              &kp F12   &kp F7  &kp F8    &kp F9  &kp C_VOL_UP  &kp C_PP
+&none         &bt BT_CLR        &bt BT_SEL 3      &bt BT_SEL 2          &bt BT_SEL 1        &bt BT_SEL 0       &kp F12   &kp F7  &kp F8    &kp F9  &kp C_VOL_UP  &kp C_PP
 &sys_reset    &acc SQT A        &acc SQT E        &acc LS(N6) E         &acc LS(GRAVE) A    &acc LS(GRAVE) O   &kp F10   &kp F4  &kp F5    &kp F6  &kp C_VOL_DN  &kp C_NEXT
 &bootloader   &acc SQT C        &none             &m_cao                &m_oes              &acc GRAVE A       &kp F11   &kp F1  &kp F2    &kp F3  &kp C_MUTE    &kp C_PREV
                                 &none             &kp C_BRI_DN          &kp C_BRI_UP        &kp LG(LS(N4))     &kp LG(LS(N5))     &studio_unlock
-            >;
-        };
-
-        // Segurando &mo SCROLL, o trackball rola (scroll-layers no overlay)
-        Scroll {
-            display-name = "Scroll";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        // Segurar o polegar esquerdo externo. Esquerda = herdr (ctrl+a …); direita = AeroSpace,
-        // com os workspaces na mesma posição dos números do layer NumSetas (Fluxo + 5 = alt-5).
-        Fluxo {
-            display-name = "Fluxo";
-            bindings = <
-&hx LS(SLASH)  &hx C        &hx P        &hx N        &hx G        &hx F         &kp LA(S)        &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(W)  &kp LC(A)
-&trans         &hx Z        &hx O        &hx LS(A)    &hx A        &hx W         &kp LA(N0)       &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(R)  &hx V
-&trans         &hx LC(G)    &hx LC(D)    &hx LC(P)    &hx LC(S)    &hx LC(R)     &kp LS(LA(I))    &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(M)  &hx MINUS
-                                         &trans       &trans       &trans        &trans           &trans      &trans
             >;
         };
 
@@ -146,9 +125,33 @@
             display-name = "Mouse";
             bindings = <
 &trans  &trans      &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mo SNIPE   &mkp RCLK  &mkp MCLK  &mkp LCLK  &mo SCROLL   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mo SNIPE   &mkp RCLK  &mo SCROLL &mkp LCLK  &mkp MCLK    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
                                &trans     &trans     &trans       &trans  &trans  &trans
+            >;
+        };
+
+        // Segurar o polegar esquerdo externo. Esquerda = herdr (ctrl+a …: coluna externa = tarefas, captura e
+        // mapa do teclado); direita = AeroSpace,
+        // com os workspaces na mesma posição dos números do layer NumSetas (Fluxo + 5 = alt-5).
+        Fluxo {
+            display-name = "Fluxo";
+            bindings = <
+&hx LC(T)      &hx C        &hx P        &hx N        &hx G        &hx F         &kp LA(S)        &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(W)  &kp LC(A)
+&hx LC(N)      &hx Z        &hx O        &hx LS(A)    &hx A        &hx W         &kp LA(N0)       &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(R)  &hx V
+&hx LC(K)      &hx LC(G)    &hx LC(D)    &hx LC(P)    &hx LC(S)    &hx LC(R)     &kp LS(LA(I))    &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(M)  &hx MINUS
+                                         &trans       &trans       &trans        &trans           &trans      &trans
+            >;
+        };
+
+        // Segurando &mo SCROLL (tecla do E no layer Mouse, onde era o clique do meio), o trackball rola (scroll-layers no overlay)
+        Scroll {
+            display-name = "Scroll";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
